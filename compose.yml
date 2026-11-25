@@ -2,13 +2,13 @@
 services:
     mysqldb:
       container_name: mysqldb
-      image: shaikmustafa77/hussian:db
+      image: charanmummidi/k8s_php:dbimage
       ports:
         - "3306:3306"
 
     application:
       container_name: mycont
-      image: shaikmustafa77/hussian:app
+      image: charanmummidi/k8s_php:appimage
       ports:
         - "1212:80"
       depends_on:
